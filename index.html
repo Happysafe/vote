@@ -15,7 +15,7 @@
 	<meta name="description" content="Civic Data HK Invitation">
 	<meta name="keywords" content="civicdata, votsonar">
 
-	<meta name="author" content="www.civicdata.com.hk">
+	<meta name="author" content="www.civicdata.hk">
 
 	<meta http-equiv="cleartype" content="on">
 
@@ -61,10 +61,38 @@
 
 <script>
 function submit_vote() {
+	var BOT = 'AMESOME_BOT_NAME'
 	var queryString = window.location.search;
 	queryString = queryString.substring(1);
-	window.location = "http://telegram.me/xxxxxx?"+ queryString;
-}	
+        
+        //below code copied from https://telegram.me
+	var protoUrl = "tg:\/\/resolve?domain="+BOT+"&start=" + queryString;
+	if (false) {
+		var iframeContEl = document.getElementById('tgme_frame_cont') || document.body;
+		var iframeEl = document.createElement('iframe');
+		iframeContEl.appendChild(iframeEl);
+		var pageHidden = false;
+		window.addEventListener('pagehide', function () {
+            pageHidden = true;
+		}, false);
+		window.addEventListener('blur', function () {
+			pageHidden = true;
+		}, false);
+		if (iframeEl !== null) {
+			iframeEl.src = protoUrl;
+		}
+		setTimeout(function() {
+			if (!pageHidden) {
+				window.location = protoUrl;
+			}
+		}, 2000);
+	}
+	else if (protoUrl) {
+		setTimeout(function() {
+			window.location = protoUrl;
+		}, 100);
+	}
+}
 </script>
 
 <body>
