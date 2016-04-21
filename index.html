@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <!-- HTML5 Boilerplate -->
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
@@ -49,11 +49,11 @@
 	<link rel="stylesheet" href="css/2cols.css" media="all">
 
 	<style type="text/css">
-	body { padding:2em; font : 100%/1.4 'Helvetica Neue', arial, helvetica, helve, sans-serif; }
-	h1 { font-size:2.2em; padding:0 0 .5em 0; }
-	h2 { font-size:1.5em; }
+	body { padding:2em; color: #fff; font : 100%/1.4; font-family: Tahoma, Helvetica, Arial, "Microsoft Yahei","微软雅黑", STXihei, "华文细黑", sans-serif; letter-spacing: 1px; line-height: 120%; font-size: 0.95em; }
+	h1 { font-size:2em; padding:1em 0 1em 0; }
+	h2 { font-size:1.2em;  padding:1em 0 0.1em 0; }
 	.header { padding: 0; }
-	.col { background: #ccc; padding:1em 0; text-align:center;}
+	.col {padding:1em 0; text-align:left;}
 
 	</style>
 
@@ -97,31 +97,39 @@ function submit_vote() {
 
 <body>
 
-		<div class="header" style="background-image: url(images/background.jpg); height: 100%; width: 100%; border: none;">
-		<img src="images/top_logo_t.gif" alt="CivicDataHK" height="100" width="100">
-		</div>
 
 		<div class="section group">
+			
 			<div class="col span_1_of_2">
+			
+				<div class="logo" style="height: 100%; width: 100%; border: none;">
+					<img src="images/votsonar_logo.png" alt="CivicDataHK" height="93" width="324"><br><br>
+				</div>
+
 				<h2>歡迎您登記公民數據!</h2><br>
 				公民數據以滾動投票方式俾支持民主既選民即時投票同睇結果。
 				選民每月1號可投票及睇各政圑嘅最新支持度，
 				以求係9月4號立法會選舉，
-				做更明智嘅投票決定。
-			</div>
-			<div class="col span_1_of_2">
-				<h2>Welcome register to Civic Data HK!</h2><br>
+				做更明智嘅投票決定。<br><br>
+
+				<h2>Welcome to Civic Data HK!</h2><br>
 				Civic Data HK lets voters vote and see polling results in real time.
 				Participants get to vote on the 1st of every month,
 				see the latest polling data of all parties and candidates,
-				and be able to make a wiser choice in the Legislature Council Election on September 4th.
-			</div>
-		</div>
+				and be able to make a wiser choice in the Legislature Council Election on September 4th.<br><br><br>
 
-		<div class="section group" align="center">
-			<a href="#" id="vote" onclick="submit_vote();return false;" >
-			<img src="images/button_vote.png" height="40" width="142" alt="Vote">
-			</a>
+
+				<div class="section group" align="center">
+					<a href="#" id="vote" onclick="submit_vote();return true;" >
+					<img src="images/button_vote.png" height="64" width="230" alt="Vote">
+					</a>
+				</div>			
+
+
+			</div>
+			<div class="col span_1_of_2">
+				<img src="images/FlowExplanation.png" height="600" width="670" alt="Flow explanation">
+			</div>
 		</div>
 </body>
 </html>

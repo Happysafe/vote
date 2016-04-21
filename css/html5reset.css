@@ -23,6 +23,7 @@ time, mark, audio, video {
 
 body {
     line-height: 1;
+    background-image: url("../images/background.png");
 }
 
 article,aside,details,figcaption,figure,
